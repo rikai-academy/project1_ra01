@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import "products";
+@import "lightslider";
 * {
   margin: 0;
   padding: 0;
@@ -632,7 +634,7 @@ main .rightslide .content-sortBy h1 {
 main .rightslide .dataGrid {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-template-rows: 33% 33% 33%;
+  //grid-template-rows: 50% 33% 33%;
   grid-gap: 10px;
   padding: 1em 0 0 0;
 }
@@ -735,6 +737,7 @@ main .rightslide .dataGrid h1 {
   font-weight: 600;
   font-size: 20px;
   line-height: 30px;
+  width: 280px;
   text-align: center;
   color: #131045;
 }
