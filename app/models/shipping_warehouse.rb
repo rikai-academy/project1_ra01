@@ -1,0 +1,2 @@
+class ShippingWarehouse < ApplicationRecord
+end

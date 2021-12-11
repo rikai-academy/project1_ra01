@@ -1,6 +1,6 @@
   <header>
     <div class="logo">
-      <a href="BooksListView_Sidebar.html">
+      <%= link_to products_path do %>
       <div>
         <img src="./image/logo.png" alt="">
       </div>
@@ -9,7 +9,7 @@
           <%= image_tag 'book_logo1.png' %>
         </div>
         <p>Book Store Website</p>
-      </a>
+       <% end %>
     </div>
 
     <div class="menu-search">
@@ -32,9 +32,13 @@
       <a href="" class="fas fa-heart heart">
         <span>21</span>
       </a>
-      <a href="" class="fas fa-cart-plus cart-plus">
-        <span>21</span>
+      <% if order_has_items %>
+        <%= link_to order_path(@order),class:"fas fa-cart-plus cart-plus" do %>
+          <span><%= order_count_over_one %></span>
+        <% end %>
       </a>
+      <% end %>
+
     </div>
     <div class="profile">
       <a href="Profile.html">

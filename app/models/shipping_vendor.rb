@@ -1,0 +1,2 @@
+class ShippingVendor< ApplicationRecord
+end

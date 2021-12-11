@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_30_114106) do
+ActiveRecord::Schema.define(version: 2021_12_09_025807) do
 
   create_table "order_items", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "product_id", null: false
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2021_11_30_114106) do
     t.string "country"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "shipping_method_id", null: false
+    t.bigint "shipping_method_id", default: 1
     t.index ["shipping_method_id"], name: "index_orders_on_shipping_method_id"
   end
 

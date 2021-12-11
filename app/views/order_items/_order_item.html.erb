@@ -1,0 +1,17 @@
+<tr>
+              <td class="info-product"><%= image_tag 'harrypotter', style:"width:150px" %><p><%= order_item.product.name %></p></td>
+              <td>$<%= order_item.product.price %></td>
+              <td>
+                <div class="btn-qty btn-qty-bonus">
+                  <button>-</button>
+                  <input type="text" value="<%= order_item.quantily %>">
+                  <button>+</button>
+                </div>
+              </td>
+              <td><%= number_to_currency(order_item.total_price) %></td>
+              <td>
+                <%= link_to order_item,method: :delete,data:{confirm:"Are you sure?"}, class:"delete-button" do %>
+                  <i class="far fa-trash-alt"></i><span>Detete</span>
+                <% end %>
+              </td>
+</tr>

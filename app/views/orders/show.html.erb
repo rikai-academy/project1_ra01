@@ -1,0 +1,60 @@
+  <main>
+    <section class="stepper">
+      <div class="group59">
+        <div class="passed">
+        </div>
+        <h2>Shopping Summary</h2>
+        <span class=""></span>
+      </div>
+      <div class="group59">
+        <div class="passed">
+        </div>
+        <h2>Checkout</h2>
+        <span></span>
+      </div>
+      <div class="group59">
+        <div class="passed">
+        </div>
+        <h2>Payment</h2>
+        <span></span>
+      </div>
+      <div class="group59">
+        <div class="passed">
+        </div>
+        <h2>Shipping</h2>
+      </div>
+    </section>
+
+<section class="cart">
+      <div class="container">
+        <div class="info-cart">
+          <table>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Control</th>
+            </tr>
+            <%= render (@order.order_items)%>
+          </table>
+        </div>
+        <div class="summary">
+          <div>
+
+          </div>
+          <div class="control">
+            <h1>Total:<span><%= number_to_currency(@order.total_price) %></span></h1>
+            <a href="checkout.html">
+              <button type="submit" class="btn-buy">
+                <i class="fas fa-cart-arrow-down"></i><span>Buy</span>
+              </button>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+  </main>
